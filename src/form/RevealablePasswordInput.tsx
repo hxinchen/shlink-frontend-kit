@@ -60,7 +60,6 @@ export const RevealablePasswordInput: FC<RevealablePasswordInputProps> = ({
             'scale-85 right-1': size === 'sm',
           },
         )}
-        tabIndex={-1}
       >
         <FontAwesomeIcon icon={passwordRevealed ? faEyeSlash : faEye} />
       </button>

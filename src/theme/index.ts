@@ -13,7 +13,8 @@ export const HIGHLIGHTED_COLOR = '#f77f28';
 export const HIGHLIGHTED_COLOR_ALPHA = 'rgba(247, 127, 40, 0.4)';
 
 export const PRIMARY_LIGHT_COLOR = 'white';
-export const PRIMARY_DARK_COLOR = '#161b22';
+// Must match --color-dm-primary in tailwind.preset.css (charts use it to blend slices with the surface)
+export const PRIMARY_DARK_COLOR = '#1c1c1c';
 
 export type Theme = 'dark' | 'light';
 

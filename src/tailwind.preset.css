@@ -9,7 +9,6 @@
   --color-lm-brand: #2563eb;
   --color-lm-brand-dark: #1d4ed8;
   --color-lm-primary: #ffffff;
-  --color-lm-primary-alfa: rgb(var(--color-lm-primary) / 0.5);
   --color-lm-secondary: #f4f6f8;
   --color-lm-text: #111827;
   --color-lm-border: #dfe3e8;
@@ -26,7 +25,6 @@
   --color-dm-brand: #7cb3ff;
   --color-dm-brand-dark: #5c8edc;
   --color-dm-primary: #1c1c1c;
-  --color-dm-primary-alfa: rgb(var(--color-dm-primary) / 0.8);
   --color-dm-secondary: #000000;
   --color-dm-text: #eef2f7;
   --color-dm-border: rgb(255 255 255 / 0.12);

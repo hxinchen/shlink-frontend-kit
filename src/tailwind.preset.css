@@ -40,6 +40,8 @@
   /* General color palette */
   --color-danger: #dc3545;
   --color-danger-dark: color-mix(in srgb, black 20%, var(--color-danger) 80%);
+  --color-success: #1a7f37;
+  --color-success-dark: color-mix(in srgb, black 20%, var(--color-success) 80%);
   --color-warning: #ffc107;
   --color-warning-dark: color-mix(in srgb, black 20%, var(--color-warning) 80%);
   --color-placeholder: #6c757d;

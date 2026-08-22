@@ -1,6 +1,6 @@
 import { clsx } from 'clsx';
 import type { FC, ReactNode, SubmitEvent } from 'react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Button, CloseButton } from '../form';
 import { t } from '../i18n';
 import { LinkButton } from '../navigation';
@@ -75,6 +75,7 @@ export const CardModal: FC<CardModalProps> = ({
   // after a CSS transition has ended.
   const [openProxy, setOpenProxy] = useState(open);
   const ref = useRef<HTMLFormElement>(null);
+  const titleId = useId();
 
   // Track what was the exit action, so that we can call onConfirmed with the right value, once close transition ended
   const exitAction = useRef<ExitAction>('cancel');
@@ -138,6 +139,7 @@ export const CardModal: FC<CardModalProps> = ({
     <ModalDialog
       open={openProxy}
       onClose={onClose}
+      aria-labelledby={titleId}
       className={clsx(
         {
           'flex w-screen h-screen max-w-screen max-h-screen': openProxy,
@@ -179,7 +181,7 @@ export const CardModal: FC<CardModalProps> = ({
                   '[text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]',
                 )}
               >
-                <h5>{title}</h5>
+                <h5 id={titleId}>{title}</h5>
                 <CloseButton onClick={onClose} label={t('Close dialog')} />
               </div>
               {children}
@@ -187,7 +189,7 @@ export const CardModal: FC<CardModalProps> = ({
           ) : (
             <>
               <Card.Header className={clsx('sticky top-0', 'flex items-center justify-between gap-x-2')}>
-                <h5 className={clsx({ 'text-danger': variant === 'danger' })}>{title}</h5>
+                <h5 id={titleId} className={clsx({ 'text-danger': variant === 'danger' })}>{title}</h5>
                 <CloseButton onClick={onClose} label={t('Close dialog')} />
               </Card.Header>
               <Card.Body>{children}</Card.Body>

@@ -2,6 +2,7 @@
 
 exports[`<CardModal /> > renders expected size 1`] = `
 <dialog
+  aria-labelledby="_r_11_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -18,6 +19,7 @@ exports[`<CardModal /> > renders expected size 1`] = `
       >
         <h5
           class=""
+          id="_r_11_"
         >
           The title
         </h5>
@@ -57,6 +59,7 @@ exports[`<CardModal /> > renders expected size 1`] = `
 
 exports[`<CardModal /> > renders expected size 2`] = `
 <dialog
+  aria-labelledby="_r_14_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -73,6 +76,7 @@ exports[`<CardModal /> > renders expected size 2`] = `
       >
         <h5
           class=""
+          id="_r_14_"
         >
           The title
         </h5>
@@ -112,6 +116,7 @@ exports[`<CardModal /> > renders expected size 2`] = `
 
 exports[`<CardModal /> > renders expected size 3`] = `
 <dialog
+  aria-labelledby="_r_17_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -128,6 +133,7 @@ exports[`<CardModal /> > renders expected size 3`] = `
       >
         <h5
           class=""
+          id="_r_17_"
         >
           The title
         </h5>
@@ -167,6 +173,7 @@ exports[`<CardModal /> > renders expected size 3`] = `
 
 exports[`<CardModal /> > renders expected size 4`] = `
 <dialog
+  aria-labelledby="_r_1a_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -183,6 +190,7 @@ exports[`<CardModal /> > renders expected size 4`] = `
       >
         <h5
           class=""
+          id="_r_1a_"
         >
           The title
         </h5>
@@ -222,6 +230,7 @@ exports[`<CardModal /> > renders expected size 4`] = `
 
 exports[`<CardModal /> > renders expected variant 1`] = `
 <dialog
+  aria-labelledby="_r_1d_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -238,6 +247,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
       >
         <h5
           class=""
+          id="_r_1d_"
         >
           The title
         </h5>
@@ -294,6 +304,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
 
 exports[`<CardModal /> > renders expected variant 2`] = `
 <dialog
+  aria-labelledby="_r_1g_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
   open=""
 >
@@ -310,6 +321,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
       >
         <h5
           class="text-danger"
+          id="_r_1g_"
         >
           The title
         </h5>
@@ -366,6 +378,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
 
 exports[`<CardModal /> > renders expected variant 3`] = `
 <dialog
+  aria-labelledby="_r_1j_"
   class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen overflow-hidden"
   open=""
 >
@@ -380,7 +393,9 @@ exports[`<CardModal /> > renders expected variant 3`] = `
       <div
         class="px-4 py-3 absolute top-0 left-0 right-0 z-3000 flex items-center justify-between text-white bg-linear-to-b from-black/70 to-black/10 [text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]"
       >
-        <h5>
+        <h5
+          id="_r_1j_"
+        >
           The title
         </h5>
         <button

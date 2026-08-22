@@ -1,8 +1,7 @@
-import { faCircleNotch as preloader } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
 import type { FC, PropsWithChildren } from 'react';
 import { SimpleCard } from '../surfaces';
+import { Spinner } from './Spinner';
 
 export type MessageProps = PropsWithChildren<{
   className?: string;
@@ -27,7 +26,7 @@ export const Message: FC<MessageProps> = ({ className, children, variant = 'defa
       >
         {isLoading && (
           <>
-            <FontAwesomeIcon icon={preloader} spin />
+            <Spinner />
             <span className="ml-2">{children ?? 'Loading...'}</span>
           </>
         )}

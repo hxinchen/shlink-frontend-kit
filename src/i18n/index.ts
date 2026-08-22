@@ -31,6 +31,8 @@ const dictionaries: Record<string, Dictionary> = {
     'Show password': '显示密码',
     'Hide password': '隐藏密码',
     'Show menu': '显示菜单',
+    'Loading...': '加载中…',
+    'Dismiss notification': '关闭通知',
     'Hide menu': '隐藏菜单',
   },
 };

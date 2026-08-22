@@ -1,4 +1,15 @@
-import { flip, offset, shift, useClick, useFloating, useInteractions } from '@floating-ui/react';
+import {
+  flip,
+  FloatingPortal,
+  offset,
+  shift,
+  size,
+  useClick,
+  useDismiss,
+  useFloating,
+  useInteractions,
+} from '@floating-ui/react';
+import type { OpenChangeReason } from '@floating-ui/react';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
@@ -56,33 +67,84 @@ const BaseDropdown: FC<DropdownProps> = ({
       buttonRef.current?.focus();
     }
   }, []);
+  const handleOpenChange = useCallback((open: boolean, _event?: Event, reason?: OpenChangeReason) => {
+    setIsOpen(open);
+    // Return focus to the toggle when dismissed via keyboard or outside press, matching the
+    // behavior of the previous hand-rolled implementation. Deferred because the dismissing
+    // pointer event moves focus to its target after the close has already been handled
+    if (!open && (reason === 'escape-key' || reason === 'outside-press')) {
+      window.setTimeout(() => buttonRef.current?.focus(), 0);
+    }
+  }, []);
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
-    onOpenChange: setIsOpen,
+    onOpenChange: handleOpenChange,
     placement: menuAlignment === 'right' ? 'bottom-end' : 'bottom-start',
-    middleware: [flip(), shift({ mainAxis: false, crossAxis: true }), offset(menuOffset)],
+    middleware: [
+      flip(),
+      shift({ mainAxis: false, crossAxis: true }),
+      offset(menuOffset),
+      // Inside a portal, `min-width: 100%` would resolve against the body instead of the
+      // container, widening the menu past the toggle button and covering neighboring content.
+      // Pin the menu to the reference width, which is what the previous non-portaled
+      // implementation effectively rendered
+      size({
+        apply({ rects, elements }) {
+          elements.floating.style.width = `${rects.reference.width}px`;
+        },
+      }),
+    ],
+    // The menu is rendered through a FloatingPortal, so it needs fixed positioning to escape
+    // any ancestor with transform or overflow rules
+    strategy: 'fixed',
     // oxlint-disable-next-line react-compiler/react-compiler
     elements: { reference: buttonRef.current },
   });
   const click = useClick(context);
-  const { getReferenceProps, getFloatingProps } = useInteractions([click]);
+  // Handles closing on outside click and Escape key, and is aware of the menu being portaled out
+  // of the container element
+  const dismiss = useDismiss(context);
+  const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss]);
   const menuId = useId();
 
   const containerRef = useRef<HTMLDivElement>(null);
+  const floatingRef = useRef<HTMLDivElement>(null);
+
+  // Render the portal host right after the container instead of at the end of the body, so that
+  // the portaled menu keeps its natural position in the tab order
+  const [portalRoot, setPortalRoot] = useState<HTMLDivElement | null>(null);
   useEffect(() => {
     const container = containerRef.current;
-    if (!container || !isOpen) {
-      return () => {};
+    if (!container) {
+      return undefined;
+    }
+
+    const host = document.createElement('div');
+    container.after(host);
+    setPortalRoot(host);
+
+    return () => host.remove();
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
     }
 
     const controller = new AbortController();
 
-    // Close menu when clicking outside the dropdown container
+    // Close the menu when focus moves out of it. The listener is document-level because the menu
+    // is rendered through a portal, so focus events in it do not bubble through the container
     document.body.addEventListener(
-      'click',
-      (e) => {
-        if (!e.composedPath().includes(container)) {
-          closeDropdown();
+      'focusout',
+      ({ relatedTarget }) => {
+        const target = relatedTarget instanceof HTMLElement ? relatedTarget : null;
+        // NOTE both containers must be checked with ||: contains() returns false (not nullish)
+        // for elements outside the container
+        const isWithinDropdown = !!target
+          && ((containerRef.current?.contains(target) ?? false) || (floatingRef.current?.contains(target) ?? false));
+        if (target && !isWithinDropdown) {
+          closeDropdown({ focusButton: false });
         }
       },
       { signal: controller.signal },
@@ -92,23 +154,7 @@ const BaseDropdown: FC<DropdownProps> = ({
   }, [closeDropdown, isOpen]);
 
   return (
-    // oxlint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div
-      ref={containerRef}
-      className={clsx('relative inline-block', containerClassName)}
-      onKeyDown={(e) => {
-        // Close menu when pressing Escape
-        if (e.key === 'Escape') {
-          closeDropdown();
-        }
-      }}
-      onBlur={(e) => {
-        // Close menu when focusing away
-        if (e.relatedTarget && !containerRef.current!.contains(e.relatedTarget as HTMLElement)) {
-          closeDropdown({ focusButton: false });
-        }
-      }}
-    >
+    <div ref={containerRef} className={clsx('relative inline-block', containerClassName)}>
       <button
         ref={buttonRef}
         {...getReferenceProps()}
@@ -156,20 +202,30 @@ const BaseDropdown: FC<DropdownProps> = ({
         {buttonContent}
         {!caretless && <FontAwesomeIcon icon={faCaretDown} size="xs" widthAuto />}
       </button>
-      {isOpen && (
-        <div ref={refs.setFloating} style={floatingStyles} className="min-w-full z-1500" {...getFloatingProps()}>
-          <Menu
-            className={menuClassName}
-            id={menuId}
-            focusableElementsSelector={
-              '[role="menuitem"]:not([disabled]):not([aria-disabled]),input:not([disabled]),select:not([disabled])'
-            }
-            focusFirstItem
-            onItemClick={closeDropdown}
+      {isOpen && portalRoot && (
+        <FloatingPortal root={portalRoot}>
+          <div
+            ref={(node) => {
+              refs.setFloating(node);
+              floatingRef.current = node;
+            }}
+            style={floatingStyles}
+            className="z-1500"
+            {...getFloatingProps()}
           >
-            {children}
-          </Menu>
-        </div>
+            <Menu
+              className={menuClassName}
+              id={menuId}
+              focusableElementsSelector={
+                '[role="menuitem"]:not([disabled]):not([aria-disabled]),input:not([disabled]),select:not([disabled])'
+              }
+              focusFirstItem
+              onItemClick={closeDropdown}
+            >
+              {children}
+            </Menu>
+          </div>
+        </FloatingPortal>
       )}
     </div>
   );

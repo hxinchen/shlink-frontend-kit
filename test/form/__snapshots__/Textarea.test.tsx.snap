@@ -1,0 +1,82 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Textarea /> > renders as expected based on provided props 1`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-3 py-1.5 border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 2`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-2 py-1 text-sm border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 3`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-3 py-1.5 border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 4`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-4 py-2 text-xl border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 5`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring-danger px-3 py-1.5 border-danger bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 6`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-3 py-1.5 border-lm-input-border dark:border-dm-input-border bg-lm-disabled-input dark:bg-dm-disabled-input"
+    disabled=""
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 7`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms]"
+    placeholder="Write something"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Textarea /> > renders as expected based on provided props 8`] = `
+<div>
+  <textarea
+    class="outline-none resize-y rounded-md border transition-[border-color,box-shadow,background-color] duration-[160ms] w-full focus-ring px-3 py-1.5 border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    placeholder="Write something"
+    rows="6"
+  />
+</div>
+`;

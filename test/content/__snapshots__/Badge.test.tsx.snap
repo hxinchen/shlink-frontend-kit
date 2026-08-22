@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Badge /> > renders as expected based on provided props 1`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-lm-secondary dark:bg-dm-secondary text-lm-text dark:text-dm-text"
+  >
+    Saved
+  </span>
+</div>
+`;
+
+exports[`<Badge /> > renders as expected based on provided props 2`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-lm-secondary dark:bg-dm-secondary text-lm-text dark:text-dm-text"
+  >
+    Saved
+  </span>
+</div>
+`;
+
+exports[`<Badge /> > renders as expected based on provided props 3`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-lm-brand dark:bg-dm-brand text-white dark:text-dm-main"
+  >
+    Saved
+  </span>
+</div>
+`;
+
+exports[`<Badge /> > renders as expected based on provided props 4`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-success text-white"
+  >
+    Saved
+  </span>
+</div>
+`;
+
+exports[`<Badge /> > renders as expected based on provided props 5`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-warning text-black"
+  >
+    Saved
+  </span>
+</div>
+`;
+
+exports[`<Badge /> > renders as expected based on provided props 6`] = `
+<div>
+  <span
+    class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium whitespace-nowrap bg-danger text-white"
+  >
+    Saved
+  </span>
+</div>
+`;

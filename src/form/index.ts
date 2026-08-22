@@ -11,4 +11,5 @@ export * from './SearchCombobox';
 export * from './SearchInput';
 export * from './Select';
 export * from './TagsAutocomplete';
+export * from './Textarea';
 export * from './ToggleSwitch';

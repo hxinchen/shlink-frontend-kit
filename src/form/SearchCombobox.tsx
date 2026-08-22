@@ -2,6 +2,7 @@ import { clsx } from 'clsx';
 import type { ReactNode, Ref } from 'react';
 import { useCallback, useId, useImperativeHandle, useMemo, useRef, useState } from 'react';
 import { Listbox } from '../content';
+import { t } from '../i18n';
 import type { SearchInputProps } from './SearchInput';
 import { SearchInput } from './SearchInput';
 
@@ -129,7 +130,7 @@ export function SearchCombobox<Item>({
             },
             listboxClassName,
           )}
-          aria-label="Matching items"
+          aria-label={t('Matching items')}
           noItemsMessage="No results found matching search"
         />
       )}

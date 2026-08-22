@@ -3,7 +3,7 @@
 exports[`<Message /> > renders as expected based on provided props 1`] = `
 <div>
   <div
-    class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary"
+    class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms]"
   >
     <div
       class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
@@ -19,7 +19,7 @@ exports[`<Message /> > renders as expected based on provided props 1`] = `
 exports[`<Message /> > renders as expected based on provided props 2`] = `
 <div>
   <div
-    class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary"
+    class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms]"
   >
     <div
       class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
@@ -54,7 +54,7 @@ exports[`<Message /> > renders as expected based on provided props 2`] = `
 exports[`<Message /> > renders as expected based on provided props 3`] = `
 <div>
   <div
-    class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary"
+    class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms]"
   >
     <div
       class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
@@ -89,7 +89,7 @@ exports[`<Message /> > renders as expected based on provided props 3`] = `
 exports[`<Message /> > renders as expected based on provided props 4`] = `
 <div>
   <div
-    class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary"
+    class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms]"
   >
     <div
       class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
@@ -107,7 +107,7 @@ exports[`<Message /> > renders as expected based on provided props 4`] = `
 exports[`<Message /> > renders as expected based on provided props 5`] = `
 <div>
   <div
-    class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary [&]:border-danger"
+    class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] [&]:border-danger"
   >
     <div
       class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"

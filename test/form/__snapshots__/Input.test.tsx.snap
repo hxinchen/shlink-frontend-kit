@@ -3,7 +3,7 @@
 exports[`<Input /> > renders as expected based on provided props 1`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`<Input /> > renders as expected based on provided props 2`] = `
 exports[`<Input /> > renders as expected based on provided props 3`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -27,7 +27,7 @@ exports[`<Input /> > renders as expected based on provided props 3`] = `
 exports[`<Input /> > renders as expected based on provided props 4`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-2 py-1 text-sm rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-2 py-1 text-sm rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -35,7 +35,7 @@ exports[`<Input /> > renders as expected based on provided props 4`] = `
 exports[`<Input /> > renders as expected based on provided props 5`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`<Input /> > renders as expected based on provided props 5`] = `
 exports[`<Input /> > renders as expected based on provided props 6`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-4 py-2 text-xl rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-4 py-2 text-xl rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -51,7 +51,7 @@ exports[`<Input /> > renders as expected based on provided props 6`] = `
 exports[`<Input /> > renders as expected based on provided props 7`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring-danger px-3 py-1.5 rounded-md border border-danger bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring-danger px-3 py-1.5 rounded-md border border-danger bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
   />
 </div>
 `;
@@ -59,7 +59,7 @@ exports[`<Input /> > renders as expected based on provided props 7`] = `
 exports[`<Input /> > renders as expected based on provided props 8`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-disabled-input dark:bg-dm-disabled-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-disabled-input dark:bg-dm-disabled-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
     disabled=""
   />
 </div>
@@ -68,7 +68,7 @@ exports[`<Input /> > renders as expected based on provided props 8`] = `
 exports[`<Input /> > renders as expected based on provided props 9`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-primary dark:bg-dm-primary group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
     readonly=""
   />
 </div>
@@ -77,7 +77,7 @@ exports[`<Input /> > renders as expected based on provided props 9`] = `
 exports[`<Input /> > renders as expected based on provided props 10`] = `
 <div>
   <input
-    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-disabled-input dark:bg-dm-disabled-input"
+    class="outline-none w-full focus-ring px-3 py-1.5 rounded-md border border-lm-input-border dark:border-dm-input-border bg-lm-disabled-input dark:bg-dm-disabled-input transition-[border-color,box-shadow,background-color] duration-[160ms]"
     disabled=""
     readonly=""
   />

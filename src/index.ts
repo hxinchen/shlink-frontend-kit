@@ -3,6 +3,7 @@ export * from './feedback';
 export * from './form';
 export * from './helpers';
 export * from './hooks';
+export * from './i18n';
 export * from './navigation';
 export * from './ordering';
 export * from './surfaces';

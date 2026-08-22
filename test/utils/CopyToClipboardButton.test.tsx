@@ -17,7 +17,7 @@ describe('<CopyToClipboardButton />', () => {
     const { user, ...screen } = await setUp(text);
 
     expect(writeText).not.toHaveBeenCalled();
-    await user.click(screen.getByLabelText(`Copy ${text} to clipboard`));
+    await user.click(screen.getByLabelText('Copy to clipboard'));
     expect(writeText).toHaveBeenCalledWith(text);
   });
 

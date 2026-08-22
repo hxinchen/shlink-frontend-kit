@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 import type { NumberOrEllipsis } from '../helpers';
 import { ELLIPSIS, keyForPage, pageIsEllipsis, prettifyPageNumber, progressivePagination } from '../helpers';
 import { useArrowKeyNavigation } from '../hooks';
+import { t } from '../i18n';
 
 const commonClasses = [
   'border border-r-0 last:border-r border-lm-border dark:border-dm-border',
@@ -113,7 +114,7 @@ export const Paginator: FC<PaginatorProps> = ({ currentPage, pagesCount, ...rest
           <FontAwesomeIcon size="xs" icon={faChevronLeft} />
         </DisabledPaginatorItem>
       ) : (
-        <PaginatorItem {...itemPropsForPageNumber(Math.max(1, currentPage - 1))} aria-label="Previous">
+        <PaginatorItem {...itemPropsForPageNumber(Math.max(1, currentPage - 1))} aria-label={t('Previous')}>
           <FontAwesomeIcon size="xs" icon={faChevronLeft} />
         </PaginatorItem>
       )}
@@ -132,7 +133,7 @@ export const Paginator: FC<PaginatorProps> = ({ currentPage, pagesCount, ...rest
           <FontAwesomeIcon size="xs" icon={faChevronRight} />
         </DisabledPaginatorItem>
       ) : (
-        <PaginatorItem {...itemPropsForPageNumber(Math.min(pagesCount, currentPage + 1))} aria-label="Next">
+        <PaginatorItem {...itemPropsForPageNumber(Math.min(pagesCount, currentPage + 1))} aria-label={t('Next')}>
           <FontAwesomeIcon size="xs" icon={faChevronRight} />
         </PaginatorItem>
       )}

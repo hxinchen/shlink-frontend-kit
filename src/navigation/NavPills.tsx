@@ -18,9 +18,9 @@ const Pill: FC<PillProps> = ({ className, to, ...rest }) => {
       to={to}
       className={({ isActive }) =>
         clsx(
-          'px-4 pt-2 pb-[calc(0.5rem-3px)] border-b-3',
+          'px-4 py-2.5 border-b-2',
           'highlight:text-lm-brand dark:highlight:text-dm-brand',
-          'font-bold text-center no-underline transition-colors',
+          'font-medium text-center no-underline transition-colors duration-[160ms]',
           'rounded-none outline-none focus-visible:inset-ring-2',
           'focus-visible:inset-ring-lm-brand/50 dark:focus-visible:inset-ring-dm-brand/50',
           {

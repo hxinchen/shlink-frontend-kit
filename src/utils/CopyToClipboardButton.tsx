@@ -5,6 +5,7 @@ import { clsx } from 'clsx';
 import type { FC, HTMLProps } from 'react';
 import { useCallback } from 'react';
 import { useTimeoutToggle } from '..';
+import { t } from '../i18n';
 import type { Size } from '../types';
 
 export type CopyToClipboardButtonProps = Omit<HTMLProps<HTMLButtonElement>, 'type' | 'onClick' | 'size'> & {
@@ -45,8 +46,8 @@ export const CopyToClipboardButton: FC<CopyToClipboardButtonProps> = ({
         },
         className,
       )}
-      aria-label={`Copy ${text} to clipboard`}
-      title="Copy to clipboard"
+      aria-label={t('Copy to clipboard')}
+      title={t('Copy to clipboard')}
       onClick={copyToClipboard}
       {...rest}
     >

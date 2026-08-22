@@ -51,6 +51,7 @@ export const Input: FC<InputProps> = ({
           'bg-lm-primary dark:bg-dm-primary': !disabled,
           // Use different background color when rendered inside a card
           'group-[&]/card:bg-lm-input group-[&]/card:dark:bg-dm-input': !disabled,
+          'transition-[border-color,box-shadow,background-color] duration-[160ms]': !borderless,
         },
       ],
       className,

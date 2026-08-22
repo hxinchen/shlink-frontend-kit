@@ -29,14 +29,14 @@ const Item: FC<MenuItemProps> = ({ className, selected, disabled, onClick, ...re
       data-selected={selected}
       className={clsx(
         'flex items-center gap-2',
-        'w-full px-3 py-1.5 focus-ring',
+        'w-full px-3 py-2 focus-ring transition-colors duration-[160ms]',
         // Overwrite link styles in case a Link is being used
         'no-underline text-inherit',
         {
           'cursor-pointer': !disabled,
           'pointer-events-none opacity-50': disabled,
-          'bg-lm-secondary dark:bg-dm-secondary': selected && !disabled,
-          'highlight:bg-lm-secondary dark:highlight:bg-dm-secondary highlight:z-1 relative': !selected && !disabled,
+          'bg-lm-active dark:bg-dm-active text-lm-brand dark:text-dm-brand': selected && !disabled,
+          'highlight:bg-lm-secondary dark:highlight:bg-dm-active highlight:z-1 relative': !selected && !disabled,
         },
         className,
       )}

@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import type { FC } from 'react';
 import { useCallback } from 'react';
 import { useTimeout } from '..';
+import { t } from '../i18n';
 import type { InputProps } from './Input';
 import { Input } from './Input';
 
@@ -73,7 +74,7 @@ export const SearchInput: FC<SearchInputProps> = ({
           },
           inputClassName,
         )}
-        placeholder="Search..."
+        placeholder={t('Search...')}
         onChange={(e) => searchTermChanged(e.target.value)}
         size={size}
         {...inputProps}

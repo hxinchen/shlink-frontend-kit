@@ -45,8 +45,9 @@ Footer.displayName = 'Card.Footer';
 const BaseCard: FC<CardProps> = ({ className, ...props }) => (
   <div
     className={clsx(
-      'group/card rounded-md shadow-md',
+      'group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)]',
       'border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary',
+      'transition-[background-color,border-color,box-shadow] duration-[160ms]',
       className,
     )}
     {...props}

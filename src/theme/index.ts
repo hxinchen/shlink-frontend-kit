@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-export const BRAND_COLOR_DM = '#4696e5';
-export const BRAND_COLOR_ALPHA_DM = 'rgba(70, 150, 229, 0.4)';
+export const BRAND_COLOR_DM = '#7CB3FF';
+export const BRAND_COLOR_ALPHA_DM = 'rgba(124, 179, 255, 0.4)';
 
-export const BRAND_COLOR_LM = '#2078CF';
-export const BRAND_COLOR_ALPHA_LM = 'rgba(32, 120, 207, 0.4)';
+export const BRAND_COLOR_LM = '#2563EB';
+export const BRAND_COLOR_ALPHA_LM = 'rgba(37, 99, 235, 0.4)';
 
 export const brandColor = () => (isDarkThemeEnabled() ? BRAND_COLOR_DM : BRAND_COLOR_LM);
 export const brandColorAlpha = () => (isDarkThemeEnabled() ? BRAND_COLOR_ALPHA_DM : BRAND_COLOR_ALPHA_LM);

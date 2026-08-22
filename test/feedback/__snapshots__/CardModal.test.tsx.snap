@@ -11,7 +11,7 @@ exports[`<CardModal /> > renders expected size 1`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -66,7 +66,7 @@ exports[`<CardModal /> > renders expected size 2`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -121,7 +121,7 @@ exports[`<CardModal /> > renders expected size 3`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -176,7 +176,7 @@ exports[`<CardModal /> > renders expected size 4`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -231,7 +231,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -281,7 +281,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
           Cancel
         </button>
         <button
-          class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+          class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
           type="submit"
         >
           Confirm
@@ -303,7 +303,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -353,7 +353,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
           Cancel
         </button>
         <button
-          class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring-danger px-3 py-1.5 border-danger text-white bg-danger highlight:bg-danger-dark highlight:border-danger-dark highlight:bg-danger cursor-pointer"
+          class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring-danger px-3.5 py-2 border-danger text-white bg-danger highlight:bg-danger-dark highlight:border-danger-dark highlight:bg-danger cursor-pointer"
           type="submit"
         >
           Confirm
@@ -375,7 +375,7 @@ exports[`<CardModal /> > renders expected variant 3`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-md border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary w-full h-full relative overflow-auto"
+      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full h-full relative overflow-auto"
     >
       <div
         class="px-4 py-3 absolute top-0 left-0 right-0 z-3000 flex items-center justify-between text-white bg-linear-to-b from-black/70 to-black/10 [text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]"

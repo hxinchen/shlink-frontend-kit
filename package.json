@@ -25,7 +25,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build && cp ./src/tailwind.preset.css ./dist/tailwind.preset.css",
+    "build": "vite build && node -e \"require('node:fs').copyFileSync('./src/tailwind.preset.css', './dist/tailwind.preset.css')\"",
     "test": "vitest run",
     "test:ci": "node --run test -- --coverage",
     "cs": "node --run lint && node --run format:check",

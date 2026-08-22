@@ -6,35 +6,35 @@
 
 @theme static inline {
   /* Light mode */
-  --color-lm-brand: #2078cf;
-  --color-lm-brand-dark: color-mix(in srgb, black 20%, var(--color-lm-brand) 80%);
+  --color-lm-brand: #2563eb;
+  --color-lm-brand-dark: #1d4ed8;
   --color-lm-primary: #ffffff;
   --color-lm-primary-alfa: rgb(var(--color-lm-primary) / 0.5);
-  --color-lm-secondary: #eeeff8;
-  --color-lm-text: #232323;
-  --color-lm-border: rgb(0 0 0 / 0.125);
-  --color-lm-table-border: #dee2e6;
-  --color-lm-active: #eeeeee;
-  --color-lm-main: var(--color-lm-brand);
+  --color-lm-secondary: #f4f6f8;
+  --color-lm-text: #111827;
+  --color-lm-border: #dfe3e8;
+  --color-lm-table-border: #e7ebef;
+  --color-lm-active: #eaf1ff;
+  --color-lm-main: #1c1c1c;
   --color-lm-input: var(--color-lm-primary);
   --color-lm-disabled-input: var(--color-lm-secondary);
-  --color-lm-input-text: #495057;
-  --color-lm-input-border: rgb(0 0 0 / 0.19);
-  --color-lm-table-highlight: rgb(0 0 0 / 0.075);
+  --color-lm-input-text: #263245;
+  --color-lm-input-border: #cbd3df;
+  --color-lm-table-highlight: #f8fafc;
 
   /* Dark mode */
-  --color-dm-brand: #4696e5;
-  --color-dm-brand-dark: color-mix(in srgb, black 25%, var(--color-dm-brand) 75%);
-  --color-dm-primary: #161b22;
+  --color-dm-brand: #7cb3ff;
+  --color-dm-brand-dark: #5c8edc;
+  --color-dm-primary: #1c1c1c;
   --color-dm-primary-alfa: rgb(var(--color-dm-primary) / 0.8);
-  --color-dm-secondary: #0f131a;
-  --color-dm-text: rgb(201 209 217);
-  --color-dm-border: rgb(255 255 255 / 0.15);
-  --color-dm-table-border: #393d43;
-  --color-dm-active: var(--color-dm-secondary);
-  --color-dm-main: #0b2d4e;
-  --color-dm-input: rgb(17.9928571429 22.0821428571 27.8071428571);
-  --color-dm-disabled-input: rgb(26.0071428571 31.9178571429 40.1928571429);
+  --color-dm-secondary: #000000;
+  --color-dm-text: #eef2f7;
+  --color-dm-border: rgb(255 255 255 / 0.12);
+  --color-dm-table-border: #363636;
+  --color-dm-active: #2b2b2b;
+  --color-dm-main: #000000;
+  --color-dm-input: #2b2b2b;
+  --color-dm-disabled-input: #363636;
   --color-dm-input-text: var(--color-dm-text);
   --color-dm-input-border: var(--color-dm-border);
   --color-dm-table-highlight: var(--color-dm-border);
@@ -73,6 +73,10 @@
   html,
   body {
     @apply h-full bg-lm-secondary dark:bg-dm-secondary text-lm-text dark:text-dm-text;
+    font-family: Inter, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    transition: background-color 160ms ease, color 160ms ease;
   }
 
   a {
@@ -83,19 +87,19 @@
   }
 
   h1 {
-    @apply text-[2.5rem]/[1.2] m-0 font-medium;
+    @apply text-[2.25rem]/[1.2] m-0 font-semibold tracking-[-0.02em];
   }
   h2 {
-    @apply text-[2rem]/[1.2] m-0 font-medium;
+    @apply text-[1.75rem]/[1.2] m-0 font-semibold tracking-[-0.015em];
   }
   h3 {
-    @apply text-[1.75rem]/[1.2] m-0 font-medium;
+    @apply text-[1.5rem]/[1.2] m-0 font-semibold;
   }
   h4 {
-    @apply text-2xl/[1.2] m-0 font-medium;
+    @apply text-xl/[1.2] m-0 font-semibold;
   }
   h5 {
-    @apply text-xl/[1.2] m-0 font-medium;
+    @apply text-lg/[1.2] m-0 font-semibold;
   }
   h6 {
     @apply text-base/[1.2] m-0 font-medium;
@@ -175,6 +179,17 @@
   &:hover,
   &:focus-visible {
     @slot;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 

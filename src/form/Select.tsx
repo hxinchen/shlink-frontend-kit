@@ -11,7 +11,7 @@ export type SelectProps = PropsWithChildren<SelectElementProps & BaseInputProps>
 export const Select: FC<SelectProps> = ({ className, size = 'md', feedback, disabled, ...rest }) => (
   <select
     className={clsx(
-      'w-full rounded-md border appearance-none pr-9',
+      'w-full rounded-md border appearance-none pr-9 transition-[border-color,box-shadow,background-color] duration-[160ms]',
       'bg-(image:--chevron-down) bg-no-repeat bg-position-[right_0.75rem_center] bg-size-[16px_12px]',
       {
         'focus-ring': !feedback,

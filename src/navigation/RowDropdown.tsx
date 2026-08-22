@@ -2,6 +2,7 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
 import type { FC } from 'react';
+import { t } from '../i18n';
 import type { DropdownProps } from './Dropdown';
 import { Dropdown } from './Dropdown';
 
@@ -10,7 +11,7 @@ export type RowDropdownProps = Omit<DropdownProps, 'caretless' | 'buttonContent'
 /**
  * A Dropdown designed to be used as the options menu in a table row
  */
-const BaseRowDropdown: FC<RowDropdownProps> = ({ buttonLabel = 'Options', buttonSize = 'md', ...rest }) => (
+const BaseRowDropdown: FC<RowDropdownProps> = ({ buttonLabel = t('Options'), buttonSize = 'md', ...rest }) => (
   <Dropdown
     buttonContent={<FontAwesomeIcon icon={faEllipsisV} widthAuto className={clsx({ 'px-1': buttonSize === 'sm' })} />}
     caretless

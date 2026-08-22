@@ -6,6 +6,7 @@ import { useEffect, useId } from 'react';
 import type { LinkProps } from 'react-router';
 import { Link, useLocation } from 'react-router';
 import { useToggle } from '..';
+import { t } from '../i18n';
 import { Button } from '../form';
 import type { RequiredReactNode } from '../types';
 import type { DropdownProps } from './Dropdown';
@@ -16,15 +17,16 @@ type ItemProps = {
 };
 
 const MenuItem: FC<LinkProps & ItemProps> = ({ className, active, ...props }) => (
-  <li role="menuitem" className="w-full flex" data-active={active}>
+  <li role="menuitem" className="w-full md:w-auto flex" data-active={active}>
     <Link
       className={clsx(
         'px-2 py-3',
         'max-md:w-full max-md:px-3 max-md:py-2',
-        'text-white no-underline highlight:opacity-100 transition-opacity',
+        'text-white no-underline whitespace-nowrap highlight:opacity-100 transition-[opacity,background-color] duration-[160ms] relative',
         {
           'opacity-60': !active,
           'opacity-100': active,
+          'after:absolute after:inset-x-2 after:bottom-0 after:h-0.5 after:bg-lm-brand dark:after:bg-dm-brand': active,
         },
         className,
       )}
@@ -43,14 +45,14 @@ const Dropdown: FC<Omit<DropdownProps, 'menuAlignment' | 'buttonVariant' | 'menu
   ...props
 }) => {
   return (
-    <li role="menuitem" aria-haspopup className="w-full flex" data-active={active}>
+    <li role="menuitem" aria-haspopup className="w-full md:w-auto flex" data-active={active}>
       <BaseDropdown
         containerClassName={clsx('max-md:w-full', containerClassName)}
         buttonVariant="text"
         buttonClassName={clsx(
           'px-2 py-3',
           'max-md:w-full max-md:px-3 max-md:py-2',
-          'text-white highlight:opacity-100 transition-opacity',
+          'text-white whitespace-nowrap highlight:opacity-100 transition-[opacity,background-color] duration-[160ms] relative',
           {
             'opacity-60': !active,
             'opacity-100': active,
@@ -85,12 +87,12 @@ export const BaseNavBar: FC<NavBarProps> = ({ className, brand, children }) => {
     <nav
       className={clsx(
         'w-full relative',
-        'bg-lm-main dark:bg-dm-main',
+        'bg-lm-main dark:bg-dm-main border-b border-white/10 shadow-[0_8px_24px_rgb(0_0_0_/_0.14)]',
         'flex max-md:flex-col items-center justify-between',
         className,
       )}
     >
-      <div className="w-full relative">
+      <div className="w-full md:w-auto md:flex-1 relative">
         <h4 className={clsx('text-white px-4 py-3', 'max-md:w-full max-md:flex max-md:flex-col items-center')}>
           {brand}
         </h4>
@@ -100,11 +102,11 @@ export const BaseNavBar: FC<NavBarProps> = ({ className, brand, children }) => {
           className={clsx(
             'absolute right-0 top-[50%] translate-y-[-50%]',
             'md:hidden mx-2 [&]:px-2',
-            'opacity-60 highlight:opacity-100 transition-opacity',
+          'opacity-60 highlight:opacity-100 transition-opacity duration-[160ms]',
             '[&]:text-white [&]:border-white [&]:highlight:bg-transparent',
           )}
           onClick={toggleMenu}
-          aria-label={`${menuOpen ? 'Hide' : 'Show'} menu`}
+          aria-label={menuOpen ? t('Hide menu') : t('Show menu')}
           aria-controls={menuId}
         >
           <FontAwesomeIcon icon={menuOpen ? faChevronUp : faChevronDown} />

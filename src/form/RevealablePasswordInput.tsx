@@ -4,6 +4,7 @@ import { clsx } from 'clsx';
 import type { FC, FocusEvent } from 'react';
 import { useCallback, useRef } from 'react';
 import { useToggle } from '..';
+import { t } from '../i18n';
 import type { InputProps } from './Input';
 import { Input } from './Input';
 
@@ -49,8 +50,8 @@ export const RevealablePasswordInput: FC<RevealablePasswordInputProps> = ({
       <button
         type="button"
         onClick={togglePasswordRevealed}
-        title={passwordRevealed ? 'Hide password' : 'Show password'}
-        aria-label={passwordRevealed ? 'Hide password' : 'Show password'}
+        title={passwordRevealed ? t('Hide password') : t('Show password')}
+        aria-label={passwordRevealed ? t('Hide password') : t('Show password')}
         className={clsx(
           'absolute top-[50%] translate-y-[-50%] px-1 cursor-pointer',
           'text-placeholder hover:text-lm-text hover:dark:text-dm-text transition-colors',

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useCallback } from 'react';
 import type { Order } from '..';
 import { determineOrder } from '..';
+import { t } from '../i18n';
 import type { DropdownProps } from '../navigation';
 import { Dropdown } from '../navigation';
 
@@ -37,12 +38,12 @@ export function OrderingDropdown<T extends string = string>({
     <Dropdown
       buttonContent={
         <>
-          {!isButton && 'Order by'}
-          {isButton && !order.field && <i>Order by...</i>}
+          {!isButton && t('Order by')}
+          {isButton && !order.field && <i>{t('Order by...')}</i>}
           {isButton && order.field && (
             <>
-              {prefixed && 'Order by: '}
-              {items[order.field]} - {order.dir ?? 'DESC'}
+              {prefixed && t('Order by: ')}
+              {items[order.field]} - {t(order.dir ?? 'DESC')}
             </>
           )}
         </>
@@ -63,7 +64,7 @@ export function OrderingDropdown<T extends string = string>({
       ))}
       <Dropdown.Separator />
       <Dropdown.Item disabled={!order.field} onClick={() => onChange({})}>
-        <i>Clear selection</i>
+        <i>{t('Clear selection')}</i>
       </Dropdown.Item>
     </Dropdown>
   );

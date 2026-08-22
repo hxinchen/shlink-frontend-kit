@@ -6,7 +6,7 @@ exports[`<Button /> > renders as expected based on provided props 1`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -19,7 +19,7 @@ exports[`<Button /> > renders as expected based on provided props 2`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -32,7 +32,7 @@ exports[`<Button /> > renders as expected based on provided props 3`] = `
     class="bg-white"
   >
     <button
-      class="inline-flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="inline-flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -45,7 +45,7 @@ exports[`<Button /> > renders as expected based on provided props 4`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand pointer-events-none opacity-65"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand pointer-events-none opacity-65"
       disabled=""
       type="button"
     />
@@ -59,7 +59,7 @@ exports[`<Button /> > renders as expected based on provided props 5`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-1.5 py-1 text-sm border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-2 py-1 text-sm border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -72,7 +72,7 @@ exports[`<Button /> > renders as expected based on provided props 6`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -85,7 +85,7 @@ exports[`<Button /> > renders as expected based on provided props 7`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-4 py-2 text-lg border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-4 py-2.5 text-base border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -98,7 +98,7 @@ exports[`<Button /> > renders as expected based on provided props 8`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -111,7 +111,7 @@ exports[`<Button /> > renders as expected based on provided props 9`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring-secondary px-3 py-1.5 border-zinc-500 text-zinc-500 highlight:text-white highlight:bg-zinc-500 cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring-secondary px-3.5 py-2 border-zinc-500 text-zinc-500 highlight:text-white highlight:bg-zinc-500 cursor-pointer"
       type="button"
     />
   </div>
@@ -124,7 +124,7 @@ exports[`<Button /> > renders as expected based on provided props 10`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring-danger px-3 py-1.5 border-danger text-danger highlight:text-white highlight:bg-danger cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring-danger px-3.5 py-2 border-danger text-danger highlight:text-white highlight:bg-danger cursor-pointer"
       type="button"
     />
   </div>
@@ -137,7 +137,7 @@ exports[`<Button /> > renders as expected based on provided props 11`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-white bg-lm-brand dark:bg-dm-brand highlight:bg-lm-brand-dark dark:highlight:bg-dm-brand-dark highlight:border-lm-brand-dark dark:highlight:border-dm-brand-dark highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       type="button"
     />
   </div>
@@ -150,7 +150,7 @@ exports[`<Button /> > renders as expected based on provided props 12`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring-secondary px-3 py-1.5 border-zinc-500 text-white bg-zinc-500 highlight:bg-zinc-600 highlight:border-zinc-600 highlight:bg-zinc-500 cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring-secondary px-3.5 py-2 border-zinc-500 text-white bg-zinc-500 highlight:bg-zinc-600 highlight:border-zinc-600 highlight:bg-zinc-500 cursor-pointer"
       type="button"
     />
   </div>
@@ -163,7 +163,7 @@ exports[`<Button /> > renders as expected based on provided props 13`] = `
     class="bg-white"
   >
     <button
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring-danger px-3 py-1.5 border-danger text-white bg-danger highlight:bg-danger-dark highlight:border-danger-dark highlight:bg-danger cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring-danger px-3.5 py-2 border-danger text-white bg-danger highlight:bg-danger-dark highlight:border-danger-dark highlight:bg-danger cursor-pointer"
       type="button"
     />
   </div>
@@ -176,7 +176,7 @@ exports[`<Button /> > renders as expected based on provided props 14`] = `
     class="bg-white"
   >
     <a
-      class="flex gap-2 items-center justify-center border rounded-md no-underline transition-colors focus-ring px-3 py-1.5 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand cursor-pointer"
+      class="flex gap-2 items-center justify-center border rounded-md no-underline font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms] focus-ring px-3.5 py-2 border-lm-brand dark:border-dm-brand text-lm-brand dark:text-dm-brand highlight:text-white highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px cursor-pointer"
       data-discover="true"
       href="/foo/bar"
     />

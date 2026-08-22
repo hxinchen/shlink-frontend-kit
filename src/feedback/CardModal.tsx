@@ -2,6 +2,7 @@ import { clsx } from 'clsx';
 import type { FC, ReactNode, SubmitEvent } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Button, CloseButton } from '../form';
+import { t } from '../i18n';
 import { LinkButton } from '../navigation';
 import { Card } from '../surfaces';
 import type { RequiredReactNode, Size } from '../types';
@@ -62,8 +63,8 @@ export const CardModal: FC<CardModalProps> = ({
 }) => {
   const {
     size = 'md',
-    confirmText = 'Confirm',
-    cancelText = 'Cancel',
+    confirmText = t('Confirm'),
+    cancelText = t('Cancel'),
     confirmDisabled,
     onConfirm,
     onClosed,
@@ -179,7 +180,7 @@ export const CardModal: FC<CardModalProps> = ({
                 )}
               >
                 <h5>{title}</h5>
-                <CloseButton onClick={onClose} label="Close dialog" />
+                <CloseButton onClick={onClose} label={t('Close dialog')} />
               </div>
               {children}
             </>
@@ -187,7 +188,7 @@ export const CardModal: FC<CardModalProps> = ({
             <>
               <Card.Header className={clsx('sticky top-0', 'flex items-center justify-between gap-x-2')}>
                 <h5 className={clsx({ 'text-danger': variant === 'danger' })}>{title}</h5>
-                <CloseButton onClick={onClose} label="Close dialog" />
+                <CloseButton onClick={onClose} label={t('Close dialog')} />
               </Card.Header>
               <Card.Body>{children}</Card.Body>
               {onConfirm && (

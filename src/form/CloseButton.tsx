@@ -2,6 +2,7 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
 import type { FC, HTMLProps, Ref } from 'react';
+import { t } from '../i18n';
 import type { Size } from '../types';
 
 export type CloseButtonProps = {
@@ -13,7 +14,7 @@ export type CloseButtonProps = {
   ref?: Ref<HTMLButtonElement>;
 };
 
-export const CloseButton: FC<CloseButtonProps> = ({ onClick, className, label = 'Close', size = 'lg', solid, ref }) => (
+export const CloseButton: FC<CloseButtonProps> = ({ onClick, className, label = t('Close'), size = 'lg', solid, ref }) => (
   <button
     ref={ref}
     type="button"

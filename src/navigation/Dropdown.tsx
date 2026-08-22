@@ -119,7 +119,7 @@ const BaseDropdown: FC<DropdownProps> = ({
         aria-label={buttonLabel}
         disabled={buttonDisabled}
         className={clsx(
-          'flex items-center rounded-md focus-ring',
+          'flex items-center rounded-md focus-ring transition-[background-color,border-color,color,box-shadow] duration-[160ms]',
           {
             'justify-between': !caretless,
             'cursor-pointer': !buttonDisabled,
@@ -138,8 +138,8 @@ const BaseDropdown: FC<DropdownProps> = ({
 
             // Button sizes
             'px-1.5 py-1 text-sm': buttonVariant !== 'text' && buttonSize === 'sm',
-            'px-3 py-1.5': buttonVariant !== 'text' && buttonSize === 'md',
-            'px-4 py-2 text-lg': buttonVariant !== 'text' && buttonSize === 'lg',
+            'px-3.5 py-2': buttonVariant !== 'text' && buttonSize === 'md',
+            'px-4 py-2.5 text-base': buttonVariant !== 'text' && buttonSize === 'lg',
             'gap-x-1.5': buttonSize === 'sm',
             'gap-x-2': buttonSize !== 'sm',
           },

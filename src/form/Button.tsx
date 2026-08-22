@@ -46,16 +46,16 @@ export const Button: FC<ButtonProps> = ({
         },
         'gap-2 items-center justify-center',
         'border rounded-md no-underline',
-        'transition-colors',
+        'font-medium transition-[color,background-color,border-color,box-shadow,transform] duration-[160ms]',
         {
           'focus-ring': variant === 'primary',
           'focus-ring-secondary': variant === 'secondary',
           'focus-ring-danger': variant === 'danger',
         },
         {
-          'px-1.5 py-1 text-sm': size === 'sm',
-          'px-3 py-1.5': size === 'md',
-          'px-4 py-2 text-lg': size === 'lg',
+          'px-2 py-1 text-sm': size === 'sm',
+          'px-3.5 py-2': size === 'md',
+          'px-4 py-2.5 text-base': size === 'lg',
         },
         {
           'border-lm-brand dark:border-dm-brand': variant === 'primary',
@@ -79,7 +79,7 @@ export const Button: FC<ButtonProps> = ({
         },
         !disabled && {
           'highlight:text-white': !solid,
-          'highlight:bg-lm-brand dark:highlight:bg-dm-brand': variant === 'primary',
+          'highlight:bg-lm-brand dark:highlight:bg-dm-brand highlight:-translate-y-px': variant === 'primary',
           'highlight:bg-zinc-500': variant === 'secondary',
           'highlight:bg-danger': variant === 'danger',
         },

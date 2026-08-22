@@ -1,6 +1,14 @@
 // oxlint-disable react/react-compiler
 import type { Placement } from '@floating-ui/react';
-import { arrow, autoPlacement, useFloating, useHover, useInteractions, useTransitionStyles } from '@floating-ui/react';
+import {
+  arrow,
+  autoPlacement,
+  useFocus,
+  useFloating,
+  useHover,
+  useInteractions,
+  useTransitionStyles,
+} from '@floating-ui/react';
 import { clsx } from 'clsx';
 import type { FC, PropsWithChildren } from 'react';
 import { useMemo, useRef, useState } from 'react';
@@ -31,7 +39,10 @@ export const useTooltip = ({ placement = 'auto' }: UseTooltipOptions = {}) => {
     delay: { open: 300 },
     move: true,
   });
-  const { getFloatingProps, getReferenceProps } = useInteractions([hover]);
+  // Also open the tooltip when the anchor receives keyboard focus, so that it is reachable without a mouse.
+  // With the default visibleOnly, clicking the anchor (focus without focus-visible) does not open it
+  const focus = useFocus(context);
+  const { getFloatingProps, getReferenceProps } = useInteractions([hover, focus]);
   const { isMounted, styles } = useTransitionStyles(context, { duration: 200 });
 
   const arrowSide = useMemo(() => {

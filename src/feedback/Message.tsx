@@ -24,12 +24,7 @@ export const Message: FC<MessageProps> = ({ className, children, variant = 'defa
           'text-danger': variant === 'error',
         })}
       >
-        {isLoading && (
-          <>
-            <Spinner />
-            <span className="ml-2">{children ?? 'Loading...'}</span>
-          </>
-        )}
+        {isLoading && <Spinner>{children ?? 'Loading...'}</Spinner>}
         {!isLoading && children}
       </h3>
     </SimpleCard>

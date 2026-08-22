@@ -28,7 +28,7 @@ exports[`<Message /> > renders as expected based on provided props 2`] = `
         class="text-center text-gray-500 dark:text-gray-400"
       >
         <span
-          class="inline-block"
+          class="flex items-center gap-2"
           role="status"
         >
           <svg
@@ -44,15 +44,6 @@ exports[`<Message /> > renders as expected based on provided props 2`] = `
               fill="currentColor"
             />
           </svg>
-          <span
-            class="sr-only"
-          >
-            Loading...
-          </span>
-        </span>
-        <span
-          class="ml-2"
-        >
           Loading...
         </span>
       </h3>
@@ -73,7 +64,7 @@ exports[`<Message /> > renders as expected based on provided props 3`] = `
         class="text-center text-gray-500 dark:text-gray-400"
       >
         <span
-          class="inline-block"
+          class="flex items-center gap-2"
           role="status"
         >
           <svg
@@ -89,15 +80,6 @@ exports[`<Message /> > renders as expected based on provided props 3`] = `
               fill="currentColor"
             />
           </svg>
-          <span
-            class="sr-only"
-          >
-            Loading...
-          </span>
-        </span>
-        <span
-          class="ml-2"
-        >
           Alternative content
         </span>
       </h3>

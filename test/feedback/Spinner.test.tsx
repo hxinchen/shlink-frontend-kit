@@ -13,6 +13,7 @@ describe('<Spinner />', () => {
     { label: 'Importing servers' },
     { className: 'text-xl' },
     { label: 'Custom label', className: 'text-lg' },
+    { children: 'Importing servers' },
   ])('renders as expected based on provided props', async (props) => {
     const { container } = await setUp(props);
     expect(container).toMatchSnapshot();

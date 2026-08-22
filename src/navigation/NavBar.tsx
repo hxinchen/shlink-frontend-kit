@@ -6,8 +6,8 @@ import { useEffect, useId } from 'react';
 import type { LinkProps } from 'react-router';
 import { Link, useLocation } from 'react-router';
 import { useToggle } from '..';
-import { t } from '../i18n';
 import { Button } from '../form';
+import { t } from '../i18n';
 import type { RequiredReactNode } from '../types';
 import type { DropdownProps } from './Dropdown';
 import { Dropdown as BaseDropdown } from './Dropdown';
@@ -22,10 +22,10 @@ const MenuItem: FC<LinkProps & ItemProps> = ({ className, active, ...props }) =>
       className={clsx(
         'px-2 py-3',
         'max-md:w-full max-md:px-3 max-md:py-2',
-        'text-white no-underline whitespace-nowrap highlight:opacity-100 transition-[opacity,background-color] duration-[160ms] relative',
+        'text-lm-text dark:text-dm-text no-underline whitespace-nowrap highlight:opacity-100 transition-[opacity,color] duration-[160ms] relative',
         {
-          'opacity-60': !active,
-          'opacity-100': active,
+          'opacity-65': !active,
+          'opacity-100 text-lm-brand dark:text-dm-brand font-medium': active,
           'after:absolute after:inset-x-2 after:bottom-0 after:h-0.5 after:bg-lm-brand dark:after:bg-dm-brand': active,
         },
         className,
@@ -52,10 +52,10 @@ const Dropdown: FC<Omit<DropdownProps, 'menuAlignment' | 'buttonVariant' | 'menu
         buttonClassName={clsx(
           'px-2 py-3',
           'max-md:w-full max-md:px-3 max-md:py-2',
-          'text-white whitespace-nowrap highlight:opacity-100 transition-[opacity,background-color] duration-[160ms] relative',
+          'text-lm-text dark:text-dm-text whitespace-nowrap highlight:opacity-100 transition-[opacity,color] duration-[160ms] relative',
           {
-            'opacity-60': !active,
-            'opacity-100': active,
+            'opacity-65': !active,
+            'opacity-100 text-lm-brand dark:text-dm-brand font-medium': active,
           },
           buttonClassName,
         )}
@@ -87,13 +87,18 @@ export const BaseNavBar: FC<NavBarProps> = ({ className, brand, children }) => {
     <nav
       className={clsx(
         'w-full relative',
-        'bg-lm-main dark:bg-dm-main border-b border-white/10 shadow-[0_8px_24px_rgb(0_0_0_/_0.14)]',
+        'bg-lm-main dark:bg-dm-main border-b border-lm-border dark:border-white/10',
         'flex max-md:flex-col items-center justify-between',
         className,
       )}
     >
       <div className="w-full md:w-auto md:flex-1 relative">
-        <h4 className={clsx('text-white px-4 py-3', 'max-md:w-full max-md:flex max-md:flex-col items-center')}>
+        <h4
+          className={clsx(
+            'text-lm-text dark:text-dm-text px-4 py-3',
+            'max-md:w-full max-md:flex max-md:flex-col items-center',
+          )}
+        >
           {brand}
         </h4>
         <Button
@@ -102,8 +107,8 @@ export const BaseNavBar: FC<NavBarProps> = ({ className, brand, children }) => {
           className={clsx(
             'absolute right-0 top-[50%] translate-y-[-50%]',
             'md:hidden mx-2 [&]:px-2',
-          'opacity-60 highlight:opacity-100 transition-opacity duration-[160ms]',
-            '[&]:text-white [&]:border-white [&]:highlight:bg-transparent',
+            'opacity-60 highlight:opacity-100 transition-opacity duration-[160ms]',
+            '[&]:text-lm-text dark:[&]:text-dm-text',
           )}
           onClick={toggleMenu}
           aria-label={menuOpen ? t('Hide menu') : t('Show menu')}

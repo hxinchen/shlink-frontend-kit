@@ -24,7 +24,7 @@ const buildPaginatorItemClasses = (active = false) =>
       'bg-lm-primary dark:bg-dm-primary',
       'highlight:bg-lm-secondary dark:highlight:bg-dm-secondary',
     ],
-    active && 'bg-lm-main dark:bg-dm-main text-white',
+    active && 'bg-lm-brand dark:bg-dm-brand text-white dark:text-dm-main',
   );
 
 const DisabledPaginatorItem: FC<PropsWithChildren> = ({ children }) => (

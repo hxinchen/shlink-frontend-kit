@@ -12,7 +12,7 @@ exports[`<CardModal /> > renders expected size 1`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -69,7 +69,7 @@ exports[`<CardModal /> > renders expected size 2`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -126,7 +126,7 @@ exports[`<CardModal /> > renders expected size 3`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -183,7 +183,7 @@ exports[`<CardModal /> > renders expected size 4`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -240,7 +240,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -314,7 +314,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
     >
       <div
         class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
@@ -388,7 +388,7 @@ exports[`<CardModal /> > renders expected variant 3`] = `
     data-testid="transition-container"
   >
     <div
-      class="group/card rounded-md shadow-[0_8px_24px_rgb(15_23_42_/_0.06)] dark:shadow-[0_10px_30px_rgb(0_0_0_/_0.28)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full h-full relative overflow-auto"
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full h-full relative overflow-auto"
     >
       <div
         class="px-4 py-3 absolute top-0 left-0 right-0 z-3000 flex items-center justify-between text-white bg-linear-to-b from-black/70 to-black/10 [text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]"

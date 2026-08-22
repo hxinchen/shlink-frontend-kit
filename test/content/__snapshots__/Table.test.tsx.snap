@@ -12,17 +12,17 @@ exports[`<Table /> > renders as expected based on provided props 1`] = `
         class="group"
       >
         <th
-          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Foo
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Bar
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Baz
         </th>
@@ -102,20 +102,20 @@ exports[`<Table /> > renders as expected based on provided props 2`] = `
       class="hidden lg:table-header-group"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border"
       >
         <th
-          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Foo
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Bar
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Baz
         </th>
@@ -125,7 +125,7 @@ exports[`<Table /> > renders as expected based on provided props 2`] = `
       class="lg:table-row-group flex flex-col gap-y-3"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -147,7 +147,7 @@ exports[`<Table /> > renders as expected based on provided props 2`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -169,7 +169,7 @@ exports[`<Table /> > renders as expected based on provided props 2`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -192,7 +192,7 @@ exports[`<Table /> > renders as expected based on provided props 2`] = `
       class="lg:table-row-group flex flex-col gap-y-3 mt-4"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border"
       >
         <td
           class="border-lm-border dark:border-dm-border p-2 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -224,20 +224,20 @@ exports[`<Table /> > renders as expected based on provided props 3`] = `
       class="hidden lg:table-header-group"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border"
       >
         <th
-          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Foo
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Bar
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Baz
         </th>
@@ -247,7 +247,7 @@ exports[`<Table /> > renders as expected based on provided props 3`] = `
       class="lg:table-row-group flex flex-col gap-y-3"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -269,7 +269,7 @@ exports[`<Table /> > renders as expected based on provided props 3`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -291,7 +291,7 @@ exports[`<Table /> > renders as expected based on provided props 3`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-1 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -323,20 +323,20 @@ exports[`<Table /> > renders as expected based on provided props 4`] = `
       class="hidden lg:table-header-group"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border"
       >
         <th
-          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Foo
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Bar
         </th>
         <th
-          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70"
+          class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 text-left text-xs tracking-wide text-placeholder font-medium"
         >
           Baz
         </th>
@@ -346,7 +346,7 @@ exports[`<Table /> > renders as expected based on provided props 4`] = `
       class="lg:table-row-group flex flex-col gap-y-3"
     >
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -368,7 +368,7 @@ exports[`<Table /> > renders as expected based on provided props 4`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"
@@ -390,7 +390,7 @@ exports[`<Table /> > renders as expected based on provided props 4`] = `
         </td>
       </tr>
       <tr
-        class="group lg:table-row flex flex-col lg:border-0 border-y-2 border-lm-border dark:border-dm-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
+        class="group lg:table-row flex flex-col lg:border-0 border-y border-lm-table-border dark:border-dm-table-border hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms] group-[&]/card:hover:bg-lm-secondary dark:group-[&]/card:hover:bg-dm-secondary"
       >
         <td
           class="border-lm-border dark:border-dm-border p-3 block lg:table-cell not-last:border-b-1 lg:border-b-1 before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1"

@@ -56,7 +56,7 @@ const Row: FC<HTMLProps<HTMLTableRowElement>> = ({ children, className, ...rest 
         'group',
         {
           'lg:table-row flex flex-col': responsive,
-          'lg:border-0 border-y-2 border-lm-border dark:border-dm-border': responsive,
+          'lg:border-0 border-y border-lm-table-border dark:border-dm-table-border': responsive,
 
           'hover:bg-lm-table-highlight dark:hover:bg-dm-table-highlight transition-colors duration-[160ms]': inBody,
           // Use a different hover bg color depending on the table being inside a card or not
@@ -106,8 +106,7 @@ const Cell: FC<CellProps> = ({ children, className, columnName, type, ...rest })
           'border-b-1': !responsive,
           'block lg:table-cell not-last:border-b-1 lg:border-b-1': responsive,
           'text-left': Tag === 'th',
-          'text-xs uppercase tracking-wide text-placeholder font-semibold bg-lm-secondary/70 dark:bg-dm-secondary/70':
-            inHeader,
+          'text-xs tracking-wide text-placeholder font-medium': inHeader,
 
           // For responsive tables, display the content in data-column attribute for md sizes and lower
           'before:lg:hidden before:content-[attr(data-column)] before:font-bold before:mr-1':

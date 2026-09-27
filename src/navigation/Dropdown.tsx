@@ -33,6 +33,12 @@ export type DropdownProps = PropsWithChildren<{
   menuClassName?: string;
 
   /**
+   * Controls how the floating menu is sized. Defaults to `reference`, which makes it at least as wide as the toggle
+   * button, growing if its items need more room. Use `content` to size it purely based on its items.
+   */
+  menuWidth?: 'reference' | 'content';
+
+  /**
    * Whether the menu should align with the right or the left side of the toggle button in case it is bigger.
    * Defaults to 'left'.
    */
@@ -54,6 +60,7 @@ const BaseDropdown: FC<DropdownProps> = ({
   buttonDisabled = false,
   containerClassName,
   menuClassName,
+  menuWidth = 'reference',
   caretless,
   buttonLabel,
   menuOffset = 3,
@@ -81,18 +88,24 @@ const BaseDropdown: FC<DropdownProps> = ({
     onOpenChange: handleOpenChange,
     placement: menuAlignment === 'right' ? 'bottom-end' : 'bottom-start',
     middleware: [
-      flip(),
-      shift({ mainAxis: false, crossAxis: true }),
       offset(menuOffset),
-      // Inside a portal, `min-width: 100%` would resolve against the body instead of the
-      // container, widening the menu past the toggle button and covering neighboring content.
-      // Pin the menu to the reference width, which is what the previous non-portaled
-      // implementation effectively rendered
-      size({
-        apply({ rects, elements }) {
-          elements.floating.style.width = `${rects.reference.width}px`;
-        },
-      }),
+      flip(),
+      // Shift along both axes, so that the menu stays inside the viewport. Horizontally, this matters on small screens,
+      // where toggles sit close to the edges and menus can be wider than their toggle
+      shift({ crossAxis: true, padding: 8 }),
+      ...(menuWidth === 'reference'
+        ? [
+            // Inside a portal, `min-width: 100%` would resolve against the body instead of the
+            // container, widening the menu past the toggle button and covering neighboring content.
+            // Use the reference width as the minimum width instead, which is what the previous non-portaled
+            // implementation rendered: never narrower than the toggle, but able to grow to fit its items.
+            size({
+              apply({ rects, elements }) {
+                elements.floating.style.minWidth = `${rects.reference.width}px`;
+              },
+            }),
+          ]
+        : []),
     ],
     // The menu is rendered through a FloatingPortal, so it needs fixed positioning to escape
     // any ancestor with transform or overflow rules
@@ -141,8 +154,9 @@ const BaseDropdown: FC<DropdownProps> = ({
         const target = relatedTarget instanceof HTMLElement ? relatedTarget : null;
         // NOTE both containers must be checked with ||: contains() returns false (not nullish)
         // for elements outside the container
-        const isWithinDropdown = !!target
-          && ((containerRef.current?.contains(target) ?? false) || (floatingRef.current?.contains(target) ?? false));
+        const isWithinDropdown =
+          !!target &&
+          ((containerRef.current?.contains(target) ?? false) || (floatingRef.current?.contains(target) ?? false));
         if (target && !isWithinDropdown) {
           closeDropdown({ focusButton: false });
         }

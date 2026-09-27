@@ -10,16 +10,17 @@ export type NumberOrEllipsis = number | Ellipsis;
 
 const range = (from: number, to: number): number[] => Array.from({ length: to - from }, (_, i) => from + i);
 
-export const progressivePagination = (currentPage: number, pageCount: number): NumberOrEllipsis[] => {
+export const progressivePagination = (currentPage: number, pageCount: number, delta = DELTA): NumberOrEllipsis[] => {
+  // First and last pages are always added at the end, so the range only covers pages in between
   const pages: NumberOrEllipsis[] = range(
-    Math.max(DELTA, currentPage - DELTA),
-    Math.min(pageCount - 1, currentPage + DELTA) + 1,
+    Math.max(2, currentPage - delta),
+    Math.min(pageCount - 1, currentPage + delta) + 1,
   );
 
-  if (currentPage - DELTA > DELTA) {
+  if (currentPage - delta > 2) {
     pages.unshift(ELLIPSIS);
   }
-  if (currentPage + DELTA < pageCount - 1) {
+  if (currentPage + delta < pageCount - 1) {
     pages.push(ELLIPSIS);
   }
 

@@ -7,6 +7,8 @@ describe('<NavBar />', () => {
   const setUp = () =>
     renderWithEvents(
       <MemoryRouter>
+        {/* Rendered before the navbar, so that the expanded menu, which overlaps what's below it, does not cover it */}
+        <p>Content</p>
         <NavBar brand="Brand">
           <NavBar.MenuItem to="/">Foo</NavBar.MenuItem>
           <NavBar.MenuItem to="/">Bar</NavBar.MenuItem>
@@ -31,6 +33,20 @@ describe('<NavBar />', () => {
     await user.click(screen.getByLabelText('Show menu'));
     await expect.element(screen.getByRole('menu')).toBeInTheDocument();
     await user.click(screen.getByLabelText('Hide menu'));
+    await expect.element(screen.getByRole('menu')).not.toBeInTheDocument();
+  });
+
+  it('collapses menu when clicking outside of it', async () => {
+    const { user, ...screen } = await setUp();
+
+    await user.click(screen.getByLabelText('Show menu'));
+    await expect.element(screen.getByRole('menu')).toBeInTheDocument();
+
+    // Clicking inside the menu keeps it expanded
+    await user.click(screen.getByText('Foo'));
+    await expect.element(screen.getByRole('menu')).toBeInTheDocument();
+
+    await user.click(screen.getByText('Content'));
     await expect.element(screen.getByRole('menu')).not.toBeInTheDocument();
   });
 });

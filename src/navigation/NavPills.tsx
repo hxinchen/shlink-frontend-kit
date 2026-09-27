@@ -18,7 +18,7 @@ const Pill: FC<PillProps> = ({ className, to, ...rest }) => {
       to={to}
       className={({ isActive }) =>
         clsx(
-          'px-4 py-2.5 border-b-2',
+          'px-4 py-2.5 border-b-2 shrink-0 whitespace-nowrap',
           'highlight:text-lm-brand dark:highlight:text-dm-brand',
           'font-medium text-center no-underline transition-colors duration-[160ms]',
           'rounded-none outline-none focus-visible:inset-ring-2',
@@ -49,7 +49,15 @@ export type NavPillsProps = PropsWithChildren<{
  */
 const BaseNavPills: FC<NavPillsProps> = ({ children, className, fill }) => (
   <NavPillsContext.Provider value={{ fill }}>
-    <Card role="menubar" className={clsx('flex overflow-hidden', className)}>
+    {/* Scrollable on small screens, so that a large amount of pills does not force them to shrink into
+        unreadable multi-line labels. The scrollbar is hidden, as the affordance is the cut-off pill itself. */}
+    <Card
+      role="menubar"
+      className={clsx(
+        'flex overflow-x-auto md:overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
+        className,
+      )}
+    >
       {children}
     </Card>
   </NavPillsContext.Provider>

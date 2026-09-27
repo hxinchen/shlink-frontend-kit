@@ -39,6 +39,9 @@ export const CopyToClipboardButton: FC<CopyToClipboardButtonProps> = ({
       type="button"
       className={clsx(
         'focus-ring rounded-sm cursor-pointer',
+        // Extend the clickable area beyond the icon without affecting the layout, so that it is easier to hit on touch
+        // screens
+        'relative after:absolute after:-inset-1.5',
         {
           'text-md': size === 'sm',
           'text-lg': size === 'md',

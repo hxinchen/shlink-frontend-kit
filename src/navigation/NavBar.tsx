@@ -2,7 +2,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
 import type { FC, HTMLProps } from 'react';
-import { useEffect, useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import type { LinkProps } from 'react-router';
 import { Link, useLocation } from 'react-router';
 import { useToggle } from '..';
@@ -83,8 +83,30 @@ export const BaseNavBar: FC<NavBarProps> = ({ className, brand, children }) => {
   const { pathname } = useLocation();
   useEffect(() => closeMenu(), [pathname, closeMenu]);
 
+  // In mobile devices, the expanded menu overlaps the content, so collapse it when interacting with anything else
+  const navRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!menuOpen) {
+      return undefined;
+    }
+
+    const controller = new AbortController();
+    document.addEventListener(
+      'pointerdown',
+      ({ target }) => {
+        if (target instanceof Node && !navRef.current?.contains(target)) {
+          closeMenu();
+        }
+      },
+      { signal: controller.signal },
+    );
+
+    return () => controller.abort();
+  }, [closeMenu, menuOpen]);
+
   return (
     <nav
+      ref={navRef}
       className={clsx(
         'w-full relative',
         'bg-lm-main dark:bg-dm-main border-b border-lm-border dark:border-white/10',

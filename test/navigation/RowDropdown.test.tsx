@@ -33,4 +33,12 @@ describe('<RowDropdown />', () => {
       expect(screen.getByRole('img', { includeHidden: true }).element().classList.toString()).toMatchSnapshot();
     },
   );
+
+  it('sizes the menu to its content instead of the icon button', async () => {
+    const screen = await setUpOpened();
+    const menu = screen.getByRole('menu').element();
+
+    expect(menu.className).toContain('min-w-48');
+    expect(menu.parentElement?.style.width).toBe('');
+  });
 });

@@ -33,7 +33,16 @@ const dictionaries: Record<string, Dictionary> = {
     'Show menu': '显示菜单',
     'Loading...': '加载中…',
     'Dismiss notification': '关闭通知',
+    'Select...': '请选择…',
     'Hide menu': '隐藏菜单',
+    // Orderable field names rendered by OrderingDropdown
+    'Created at': '创建时间',
+    'Short URL': '短链',
+    'Long URL': '原始链接',
+    Title: '标题',
+    Visits: '访问量',
+    Tag: '标签',
+    'Short URLs': '短链',
   },
 };
 

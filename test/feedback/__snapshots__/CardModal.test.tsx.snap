@@ -2,126 +2,12 @@
 
 exports[`<CardModal /> > renders expected size 1`] = `
 <dialog
-  aria-labelledby="_r_11_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
-  open=""
->
-  <form
-    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 sm:w-sm"
-    data-open=""
-    data-testid="transition-container"
-  >
-    <div
-      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
-    >
-      <div
-        class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
-      >
-        <h5
-          class=""
-          id="_r_11_"
-        >
-          The title
-        </h5>
-        <button
-          aria-label="Close dialog"
-          class="rounded-md focus-ring cursor-pointer opacity-50 highlight:opacity-80 transition-opacity"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="svg-inline--fa fa-xmark fa-xl"
-            data-icon="xmark"
-            data-prefix="fas"
-            role="img"
-            viewBox="0 0 384 512"
-          >
-            <path
-              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
-      >
-        <div
-          data-testid="content"
-        >
-          This is the content
-        </div>
-      </div>
-    </div>
-  </form>
-</dialog>
-`;
-
-exports[`<CardModal /> > renders expected size 2`] = `
-<dialog
-  aria-labelledby="_r_14_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
-  open=""
->
-  <form
-    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-lg"
-    data-open=""
-    data-testid="transition-container"
-  >
-    <div
-      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
-    >
-      <div
-        class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
-      >
-        <h5
-          class=""
-          id="_r_14_"
-        >
-          The title
-        </h5>
-        <button
-          aria-label="Close dialog"
-          class="rounded-md focus-ring cursor-pointer opacity-50 highlight:opacity-80 transition-opacity"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="svg-inline--fa fa-xmark fa-xl"
-            data-icon="xmark"
-            data-prefix="fas"
-            role="img"
-            viewBox="0 0 384 512"
-          >
-            <path
-              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
-              fill="currentColor"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
-      >
-        <div
-          data-testid="content"
-        >
-          This is the content
-        </div>
-      </div>
-    </div>
-  </form>
-</dialog>
-`;
-
-exports[`<CardModal /> > renders expected size 3`] = `
-<dialog
   aria-labelledby="_r_17_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
   open=""
 >
-  <form
-    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-4xl"
+  <div
+    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 sm:w-sm"
     data-open=""
     data-testid="transition-container"
   >
@@ -167,18 +53,18 @@ exports[`<CardModal /> > renders expected size 3`] = `
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </dialog>
 `;
 
-exports[`<CardModal /> > renders expected size 4`] = `
+exports[`<CardModal /> > renders expected size 2`] = `
 <dialog
   aria-labelledby="_r_1a_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
   open=""
 >
-  <form
-    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-6xl"
+  <div
+    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-lg"
     data-open=""
     data-testid="transition-container"
   >
@@ -224,14 +110,128 @@ exports[`<CardModal /> > renders expected size 4`] = `
         </div>
       </div>
     </div>
-  </form>
+  </div>
+</dialog>
+`;
+
+exports[`<CardModal /> > renders expected size 3`] = `
+<dialog
+  aria-labelledby="_r_1d_"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
+  open=""
+>
+  <div
+    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-4xl"
+    data-open=""
+    data-testid="transition-container"
+  >
+    <div
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+    >
+      <div
+        class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
+      >
+        <h5
+          class=""
+          id="_r_1d_"
+        >
+          The title
+        </h5>
+        <button
+          aria-label="Close dialog"
+          class="rounded-md focus-ring cursor-pointer opacity-50 highlight:opacity-80 transition-opacity"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-xmark fa-xl"
+            data-icon="xmark"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
+      >
+        <div
+          data-testid="content"
+        >
+          This is the content
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+`;
+
+exports[`<CardModal /> > renders expected size 4`] = `
+<dialog
+  aria-labelledby="_r_1g_"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
+  open=""
+>
+  <div
+    class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 md:w-6xl"
+    data-open=""
+    data-testid="transition-container"
+  >
+    <div
+      class="group/card rounded-md shadow-[0_1px_2px_rgb(15_23_42_/_0.05)] dark:shadow-[0_1px_3px_rgb(0_0_0_/_0.4)] border border-lm-border dark:border-dm-border bg-lm-primary dark:bg-dm-primary transition-[background-color,border-color,box-shadow] duration-[160ms] w-full"
+    >
+      <div
+        class="px-4 py-3 rounded-t-md bg-lm-primary dark:bg-dm-primary border-b border-lm-border dark:border-dm-border sticky top-0 flex items-center justify-between gap-x-2"
+      >
+        <h5
+          class=""
+          id="_r_1g_"
+        >
+          The title
+        </h5>
+        <button
+          aria-label="Close dialog"
+          class="rounded-md focus-ring cursor-pointer opacity-50 highlight:opacity-80 transition-opacity"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-xmark fa-xl"
+            data-icon="xmark"
+            data-prefix="fas"
+            role="img"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="p-4 bg-lm-primary dark:bg-dm-primary first:rounded-t-md first:rounded-t-md last:rounded-b-md"
+      >
+        <div
+          data-testid="content"
+        >
+          This is the content
+        </div>
+      </div>
+    </div>
+  </div>
 </dialog>
 `;
 
 exports[`<CardModal /> > renders expected variant 1`] = `
 <dialog
-  aria-labelledby="_r_1d_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
+  aria-labelledby="_r_1j_"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
   open=""
 >
   <form
@@ -247,7 +247,7 @@ exports[`<CardModal /> > renders expected variant 1`] = `
       >
         <h5
           class=""
-          id="_r_1d_"
+          id="_r_1j_"
         >
           The title
         </h5>
@@ -304,8 +304,8 @@ exports[`<CardModal /> > renders expected variant 1`] = `
 
 exports[`<CardModal /> > renders expected variant 2`] = `
 <dialog
-  aria-labelledby="_r_1g_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen"
+  aria-labelledby="_r_1m_"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh"
   open=""
 >
   <form
@@ -321,7 +321,7 @@ exports[`<CardModal /> > renders expected variant 2`] = `
       >
         <h5
           class="text-danger"
-          id="_r_1g_"
+          id="_r_1m_"
         >
           The title
         </h5>
@@ -378,11 +378,11 @@ exports[`<CardModal /> > renders expected variant 2`] = `
 
 exports[`<CardModal /> > renders expected variant 3`] = `
 <dialog
-  aria-labelledby="_r_1j_"
-  class="bg-transparent backdrop:bg-black/50 flex w-screen h-screen max-w-screen max-h-screen overflow-hidden"
+  aria-labelledby="_r_1p_"
+  class="bg-transparent backdrop:bg-black/50 flex w-screen h-dvh max-w-screen max-h-dvh overflow-hidden"
   open=""
 >
-  <form
+  <div
     class="w-full m-auto p-4 sm:p-6 -translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100 transition-[opacity_,_translate] duration-300 h-full"
     data-open=""
     data-testid="transition-container"
@@ -394,7 +394,7 @@ exports[`<CardModal /> > renders expected variant 3`] = `
         class="px-4 py-3 absolute top-0 left-0 right-0 z-3000 flex items-center justify-between text-white bg-linear-to-b from-black/70 to-black/10 [text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]"
       >
         <h5
-          id="_r_1j_"
+          id="_r_1p_"
         >
           The title
         </h5>
@@ -424,6 +424,6 @@ exports[`<CardModal /> > renders expected variant 3`] = `
         This is the content
       </div>
     </div>
-  </form>
+  </div>
 </dialog>
 `;

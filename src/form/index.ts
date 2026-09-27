@@ -10,6 +10,7 @@ export * from './RevealablePasswordInput';
 export * from './SearchCombobox';
 export * from './SearchInput';
 export * from './Select';
+export * from './SelectMenu';
 export * from './TagsAutocomplete';
 export * from './Textarea';
 export * from './ToggleSwitch';

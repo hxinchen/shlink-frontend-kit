@@ -2,12 +2,26 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clsx } from 'clsx';
 import type { FC, HTMLProps, PropsWithChildren } from 'react';
-import { useCallback, useMemo, useRef } from 'react';
+import { useCallback, useMemo, useRef, useSyncExternalStore } from 'react';
 import { Link } from 'react-router';
 import type { NumberOrEllipsis } from '../helpers';
 import { ELLIPSIS, keyForPage, pageIsEllipsis, prettifyPageNumber, progressivePagination } from '../helpers';
 import { useArrowKeyNavigation } from '../hooks';
 import { t } from '../i18n';
+
+/**
+ * On narrow screens, only one page is displayed at each side of the current one, as otherwise the paginator can be
+ * wider than phone screens
+ */
+const COMPACT_MEDIA_QUERY = '(max-width: 575.98px)';
+const COMPACT_DELTA = 1;
+
+const subscribeToCompactChange = (onChange: () => void) => {
+  const mediaQuery = window.matchMedia(COMPACT_MEDIA_QUERY);
+  mediaQuery.addEventListener('change', onChange);
+  return () => mediaQuery.removeEventListener('change', onChange);
+};
+const isCompact = () => window.matchMedia(COMPACT_MEDIA_QUERY).matches;
 
 const commonClasses = [
   'border border-r-0 last:border-r border-lm-border dark:border-dm-border',
@@ -17,7 +31,7 @@ const commonClasses = [
 const buildPaginatorItemClasses = (active = false) =>
   clsx(
     commonClasses,
-    'px-3 py-2 cursor-pointer no-underline',
+    'px-2.5 sm:px-3 py-2 cursor-pointer no-underline',
     'focus-ring focus-visible:z-1',
     !active && [
       'text-lm-brand dark:text-dm-brand',
@@ -28,7 +42,7 @@ const buildPaginatorItemClasses = (active = false) =>
   );
 
 const DisabledPaginatorItem: FC<PropsWithChildren> = ({ children }) => (
-  <span aria-hidden className={clsx(commonClasses, 'px-3 py-2 text-gray-400')}>
+  <span aria-hidden className={clsx(commonClasses, 'px-2.5 sm:px-3 py-2 text-gray-400')}>
     {children}
   </span>
 );
@@ -102,6 +116,7 @@ export const Paginator: FC<PaginatorProps> = ({ currentPage, pagesCount, ...rest
 
   const containerRef = useRef<HTMLDivElement>(null);
   useArrowKeyNavigation(containerRef, { elementsSelector: 'button,a', vertical: false });
+  const compact = useSyncExternalStore(subscribeToCompactChange, isCompact);
 
   if (pagesCount < 2) {
     return null;
@@ -118,7 +133,7 @@ export const Paginator: FC<PaginatorProps> = ({ currentPage, pagesCount, ...rest
           <FontAwesomeIcon size="xs" icon={faChevronLeft} />
         </PaginatorItem>
       )}
-      {progressivePagination(currentPage, pagesCount).map((pageNumber, index) => (
+      {progressivePagination(currentPage, pagesCount, compact ? COMPACT_DELTA : undefined).map((pageNumber, index) => (
         <PaginatorItem
           key={keyForPage(pageNumber, index)}
           active={pageNumber === currentPage}

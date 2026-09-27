@@ -38,6 +38,18 @@ describe('<CardModal />', () => {
     },
   );
 
+  it('does not render a form container when the modal has no confirm action', async () => {
+    await setUp();
+
+    expect(document.querySelector('[data-testid="transition-container"]')?.tagName).toBe('DIV');
+  });
+
+  it('renders a form container when the modal has a confirm action', async () => {
+    await setUp({ onConfirm: vi.fn() });
+
+    expect(document.querySelector('[data-testid="transition-container"]')?.tagName).toBe('FORM');
+  });
+
   it.each([{ confirmText: undefined }, { confirmText: 'Do something' }, { confirmText: 'Yes' }])(
     'allows confirm text to be customized',
     async ({ confirmText }) => {

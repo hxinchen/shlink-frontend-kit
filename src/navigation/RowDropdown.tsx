@@ -11,12 +11,20 @@ export type RowDropdownProps = Omit<DropdownProps, 'caretless' | 'buttonContent'
 /**
  * A Dropdown designed to be used as the options menu in a table row
  */
-const BaseRowDropdown: FC<RowDropdownProps> = ({ buttonLabel = t('Options'), buttonSize = 'md', ...rest }) => (
+const BaseRowDropdown: FC<RowDropdownProps> = ({
+  buttonLabel = t('Options'),
+  buttonSize = 'md',
+  menuClassName,
+  menuWidth = 'content',
+  ...rest
+}) => (
   <Dropdown
     buttonContent={<FontAwesomeIcon icon={faEllipsisV} widthAuto className={clsx({ 'px-1': buttonSize === 'sm' })} />}
     caretless
     buttonLabel={buttonLabel}
     buttonSize={buttonSize}
+    menuWidth={menuWidth}
+    menuClassName={clsx('min-w-48 max-w-[min(22rem,calc(100vw-1rem))] overflow-x-hidden', menuClassName)}
     {...rest}
   />
 );

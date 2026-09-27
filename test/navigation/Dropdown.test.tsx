@@ -7,6 +7,8 @@ describe('<Dropdown />', () => {
   const setUp = (props: Pick<DropdownProps, 'buttonSize' | 'buttonVariant' | 'caretless' | 'buttonDisabled'> = {}) =>
     renderWithEvents(
       <div>
+        {/* Rendered before the dropdown, so that the menu, which opens downwards, does not overlap it */}
+        <div data-testid="non-focusable-item">Non focusable item</div>
         <Dropdown buttonContent="Press me" {...props}>
           <Dropdown.Item>One</Dropdown.Item>
           <Dropdown.Item>Two</Dropdown.Item>
@@ -16,7 +18,6 @@ describe('<Dropdown />', () => {
           </Dropdown.Misc>
         </Dropdown>
         <button>Other button</button>
-        <div data-testid="non-focusable-item">Non focusable item</div>
       </div>,
     );
   const setUpOpened = async () => {

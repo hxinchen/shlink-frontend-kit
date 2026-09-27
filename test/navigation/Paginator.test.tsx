@@ -1,5 +1,6 @@
 import { MemoryRouter } from 'react-router';
 import type { RenderResult } from 'vitest-browser-react';
+import { page } from 'vitest/browser';
 import type { PaginatorProps } from '../../src';
 import { ELLIPSIS, Paginator } from '../../src';
 import { checkAccessibility } from '../__helpers__/accessibility';
@@ -58,46 +59,7 @@ describe('<Paginator />', () => {
     await expect.element(screen.getByLabelText('Next')).not.toBeInTheDocument();
   });
 
-  it.each([
-    {
-      pagesCount: 10,
-      currentPage: 2,
-      expectedPages: [1, 2, 3, 4, 10],
-      expectedEllipsis: 1,
-    },
-    {
-      pagesCount: 10,
-      currentPage: 3,
-      expectedPages: [1, 2, 3, 4, 5, 10],
-      expectedEllipsis: 1,
-    },
-    {
-      pagesCount: 10,
-      currentPage: 5,
-      expectedPages: [1, 3, 4, 5, 6, 7, 10],
-      expectedEllipsis: 2,
-    },
-    {
-      pagesCount: 10,
-      currentPage: 10,
-      expectedPages: [1, 8, 9, 10],
-      expectedEllipsis: 1,
-    },
-    {
-      pagesCount: 4,
-      currentPage: 2,
-      expectedPages: [1, 2, 3, 4],
-      expectedEllipsis: 0,
-    },
-    {
-      pagesCount: 5,
-      currentPage: 3,
-      expectedPages: [1, 2, 3, 4, 5],
-      expectedEllipsis: 0,
-    },
-  ])('renders expected amount of pages', async ({ pagesCount, currentPage, expectedPages, expectedEllipsis }) => {
-    const screen = await setUp({ pagesCount, currentPage, onPageChange: vi.fn() });
-
+  const expectPages = async (screen: RenderResult, expectedPages: number[], expectedEllipsis: number) => {
     expect(screen.getByRole('button', { name: /^\d+$/ }).elements()).toHaveLength(expectedPages.length);
     expect(screen.getByText(ELLIPSIS).elements()).toHaveLength(expectedEllipsis);
 
@@ -105,6 +67,88 @@ describe('<Paginator />', () => {
       expectedPages.map((pageNumber) =>
         expect.element(screen.getByText(`${pageNumber}`, { exact: true })).toBeInTheDocument(),
       ),
+    );
+  };
+
+  describe('on large screens', () => {
+    beforeEach(() => page.viewport(1024, 768));
+    afterEach(() => page.viewport(414, 896));
+
+    it.each([
+      {
+        pagesCount: 10,
+        currentPage: 2,
+        expectedPages: [1, 2, 3, 4, 10],
+        expectedEllipsis: 1,
+      },
+      {
+        pagesCount: 10,
+        currentPage: 3,
+        expectedPages: [1, 2, 3, 4, 5, 10],
+        expectedEllipsis: 1,
+      },
+      {
+        pagesCount: 10,
+        currentPage: 5,
+        expectedPages: [1, 3, 4, 5, 6, 7, 10],
+        expectedEllipsis: 2,
+      },
+      {
+        pagesCount: 10,
+        currentPage: 10,
+        expectedPages: [1, 8, 9, 10],
+        expectedEllipsis: 1,
+      },
+      {
+        pagesCount: 4,
+        currentPage: 2,
+        expectedPages: [1, 2, 3, 4],
+        expectedEllipsis: 0,
+      },
+      {
+        pagesCount: 5,
+        currentPage: 3,
+        expectedPages: [1, 2, 3, 4, 5],
+        expectedEllipsis: 0,
+      },
+    ])('renders expected amount of pages', async ({ pagesCount, currentPage, expectedPages, expectedEllipsis }) => {
+      const screen = await setUp({ pagesCount, currentPage, onPageChange: vi.fn() });
+      await expectPages(screen, expectedPages, expectedEllipsis);
+    });
+  });
+
+  describe('on small screens', () => {
+    it.each([
+      {
+        pagesCount: 10,
+        currentPage: 2,
+        expectedPages: [1, 2, 3, 10],
+        expectedEllipsis: 1,
+      },
+      {
+        pagesCount: 10,
+        currentPage: 5,
+        expectedPages: [1, 4, 5, 6, 10],
+        expectedEllipsis: 2,
+      },
+      {
+        pagesCount: 10,
+        currentPage: 10,
+        expectedPages: [1, 9, 10],
+        expectedEllipsis: 1,
+      },
+      {
+        pagesCount: 4,
+        currentPage: 2,
+        expectedPages: [1, 2, 3, 4],
+        expectedEllipsis: 0,
+      },
+    ])(
+      'renders fewer pages around current one',
+      async ({ pagesCount, currentPage, expectedPages, expectedEllipsis }) => {
+        const screen = await setUp({ pagesCount, currentPage, onPageChange: vi.fn() });
+        await expectPages(screen, expectedPages, expectedEllipsis);
+      },
     );
   });
 

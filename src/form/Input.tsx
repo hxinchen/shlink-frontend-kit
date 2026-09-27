@@ -39,7 +39,8 @@ export const Input: FC<InputProps> = ({
           'focus-ring': !feedback,
           'focus-ring-danger': feedback === 'error',
 
-          'px-2 py-1 text-sm': size === 'sm',
+          // iOS zooms the page in when focusing inputs with a font size smaller than 16px, so use that on small screens
+          'px-2 py-1 text-sm max-md:text-base': size === 'sm',
           'px-3 py-1.5': size === 'md',
           'px-4 py-2 text-xl': size === 'lg',
 

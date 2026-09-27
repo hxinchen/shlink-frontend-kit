@@ -43,7 +43,7 @@ export function OrderingDropdown<T extends string = string>({
           {isButton && order.field && (
             <>
               {prefixed && t('Order by: ')}
-              {items[order.field]} - {t(order.dir ?? 'DESC')}
+              {t(items[order.field])} - {t(order.dir ?? 'DESC')}
             </>
           )}
         </>
@@ -58,7 +58,7 @@ export function OrderingDropdown<T extends string = string>({
           onClick={() => handleItemClick(fieldKey as T)}
           className="flex items-center justify-between gap-2"
         >
-          {fieldValue as string}
+          {t(fieldValue as string)}
           {order.field === fieldKey && <FontAwesomeIcon icon={order.dir === 'ASC' ? sortAscIcon : sortDescIcon} />}
         </Dropdown.Item>
       ))}

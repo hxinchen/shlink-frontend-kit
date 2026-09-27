@@ -74,7 +74,7 @@ export const CardModal: FC<CardModalProps> = ({
   // Proxy the open/close modal state via an auxiliary variable, so that we can delay transitioning to `open=false`
   // after a CSS transition has ended.
   const [openProxy, setOpenProxy] = useState(open);
-  const ref = useRef<HTMLFormElement>(null);
+  const ref = useRef<HTMLElement>(null);
   const titleId = useId();
 
   // Track what was the exit action, so that we can call onConfirmed with the right value, once close transition ended
@@ -135,6 +135,75 @@ export const CardModal: FC<CardModalProps> = ({
     }
   }, [openProxy]);
 
+  const transitionContainerClassName = clsx(
+    'w-full m-auto p-4 sm:p-6',
+
+    // CSS transitions are based on the presence of the `data-open` attribute
+    '-translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100',
+    'transition-[opacity_,_translate] duration-300',
+
+    // Handle modal dimensions for different variants and sizes
+    variant !== 'cover' && {
+      'sm:w-sm': size === 'sm',
+      'md:w-lg': size === 'md',
+      'md:w-4xl': size === 'lg',
+      'md:w-6xl': size === 'xl',
+    },
+    { 'h-full': variant === 'cover' },
+  );
+
+  const modalContent = (
+    <Card className={clsx('w-full', { 'h-full relative overflow-auto': variant === 'cover' })}>
+      {variant === 'cover' ? (
+        <>
+          <div
+            className={clsx(
+              'px-4 py-3 absolute top-0 left-0 right-0 z-3000',
+              'flex items-center justify-between',
+              'text-white bg-linear-to-b from-black/70 to-black/10',
+              '[text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]',
+            )}
+          >
+            <h5 id={titleId}>{title}</h5>
+            <CloseButton onClick={onClose} label={t('Close dialog')} />
+          </div>
+          {children}
+        </>
+      ) : (
+        <>
+          <Card.Header className={clsx('sticky top-0', 'flex items-center justify-between gap-x-2')}>
+            <h5 id={titleId} className={clsx({ 'text-danger': variant === 'danger' })}>
+              {title}
+            </h5>
+            <CloseButton onClick={onClose} label={t('Close dialog')} />
+          </Card.Header>
+          <Card.Body>{children}</Card.Body>
+          {onConfirm && (
+            <Card.Footer
+              data-testid="footer"
+              className={clsx('flex justify-end items-center gap-x-2', '[&]:px-3 sticky bottom-0')}
+            >
+              <LinkButton onClick={onClose}>{cancelText}</LinkButton>
+              <Button
+                solid
+                variant={variant === 'danger' ? 'danger' : 'primary'}
+                disabled={confirmDisabled}
+                type="submit"
+              >
+                {confirmText}
+              </Button>
+            </Card.Footer>
+          )}
+        </>
+      )}
+    </Card>
+  );
+
+  const transitionContainerProps = {
+    'data-testid': 'transition-container',
+    className: transitionContainerClassName,
+  };
+
   return (
     <ModalDialog
       open={openProxy}
@@ -142,77 +211,34 @@ export const CardModal: FC<CardModalProps> = ({
       aria-labelledby={titleId}
       className={clsx(
         {
-          'flex w-screen h-screen max-w-screen max-h-screen': openProxy,
+          // Dynamic viewport units ensure the sticky footer is not hidden behind mobile browsers' toolbars
+          'flex w-screen h-dvh max-w-screen max-h-dvh': openProxy,
           'overflow-hidden': variant === 'cover',
         },
         className,
       )}
       {...restDialogProps}
     >
-      <form
-        data-testid="transition-container"
-        ref={ref}
-        className={clsx(
-          'w-full m-auto p-4 sm:p-6',
-
-          // CSS transitions are based on the presence of the `data-open` attribute
-          '-translate-y-4 data-open:translate-y-0 opacity-0 data-open:opacity-100',
-          'transition-[opacity_,_translate] duration-300',
-
-          // Handle modal dimensions for different variants and sizes
-          variant !== 'cover' && {
-            'sm:w-sm': size === 'sm',
-            'md:w-lg': size === 'md',
-            'md:w-4xl': size === 'lg',
-            'md:w-6xl': size === 'xl',
-          },
-          { 'h-full': variant === 'cover' },
-        )}
-        onSubmit={confirm}
-      >
-        <Card className={clsx('w-full', { 'h-full relative overflow-auto': variant === 'cover' })}>
-          {variant === 'cover' ? (
-            <>
-              <div
-                className={clsx(
-                  'px-4 py-3 absolute top-0 left-0 right-0 z-3000',
-                  'flex items-center justify-between',
-                  'text-white bg-linear-to-b from-black/70 to-black/10',
-                  '[text-shadow:_0_2px_4px_rgb(0_0_0/_0.8)]',
-                )}
-              >
-                <h5 id={titleId}>{title}</h5>
-                <CloseButton onClick={onClose} label={t('Close dialog')} />
-              </div>
-              {children}
-            </>
-          ) : (
-            <>
-              <Card.Header className={clsx('sticky top-0', 'flex items-center justify-between gap-x-2')}>
-                <h5 id={titleId} className={clsx({ 'text-danger': variant === 'danger' })}>{title}</h5>
-                <CloseButton onClick={onClose} label={t('Close dialog')} />
-              </Card.Header>
-              <Card.Body>{children}</Card.Body>
-              {onConfirm && (
-                <Card.Footer
-                  data-testid="footer"
-                  className={clsx('flex justify-end items-center gap-x-2', '[&]:px-3 sticky bottom-0')}
-                >
-                  <LinkButton onClick={onClose}>{cancelText}</LinkButton>
-                  <Button
-                    solid
-                    variant={variant === 'danger' ? 'danger' : 'primary'}
-                    disabled={confirmDisabled}
-                    type="submit"
-                  >
-                    {confirmText}
-                  </Button>
-                </Card.Footer>
-              )}
-            </>
-          )}
-        </Card>
-      </form>
+      {onConfirm ? (
+        <form
+          {...transitionContainerProps}
+          ref={(element) => {
+            ref.current = element;
+          }}
+          onSubmit={confirm}
+        >
+          {modalContent}
+        </form>
+      ) : (
+        <div
+          {...transitionContainerProps}
+          ref={(element) => {
+            ref.current = element;
+          }}
+        >
+          {modalContent}
+        </div>
+      )}
     </ModalDialog>
   );
 };
